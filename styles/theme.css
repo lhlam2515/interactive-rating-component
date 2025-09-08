@@ -19,3 +19,11 @@
   --spacing-400: 2rem;
   --spacing-500: 2.5rem;
 }
+
+@media (min-width: 48rem) {
+  :root {
+    --text-title: 700 2rem/1.2 var(--font-family);
+    --text-body: 400 1rem/1.5 var(--font-family);
+    --text-button: 700 1rem/1 var(--font-family);
+  }
+}

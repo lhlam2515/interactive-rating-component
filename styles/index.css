@@ -34,10 +34,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--spacing-400);
+  gap: var(--spacing-300);
   width: 90%;
   max-width: 25rem;
-  padding: var(--spacing-400) var(--spacing-300);
+  padding: var(--spacing-300);
   border-radius: 1rem;
   background-color: var(--color-grey-900);
 }
@@ -76,9 +76,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
-  padding: var(--spacing-100);
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.8rem;
   border-radius: 50%;
   background-color: var(--color-grey-700);
   object-fit: contain;
@@ -149,4 +149,26 @@ body {
 .submit-btn:focus {
   cursor: pointer;
   background-color: var(--color-white);
+}
+
+@media (min-width: 40rem) {
+  .card {
+    gap: var(--spacing-400);
+    padding: var(--spacing-500) var(--spacing-300);
+  }
+
+  .rating-card .card__header img {
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+  }
+
+  .rating-form {
+    gap: var(--spacing-400);
+  }
+
+  .rating-option {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
 }
