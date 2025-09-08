@@ -20,11 +20,12 @@
     <title>Frontend Mentor | Interactive rating component</title>
 
     <link rel="stylesheet" href="./styles/index.css" />
+    <script src="./scripts/index.js" defer></script>
   </head>
   <body>
     <main class="container">
       <!-- Rating state start -->
-      <article class="card rating-card">
+      <article id="rating-card" class="card rating-card">
         <header class="card__header">
           <img src="./images/icon-star.svg" alt="" />
         </header>
@@ -66,7 +67,7 @@
       <!-- Rating state end -->
 
       <!-- Thank you state start -->
-      <article class="card thank-you-card hidden">
+      <article id="thank-you-card" class="card thank-you-card hidden">
         <header class="card__header">
           <img src="./images/illustration-thank-you.svg" alt="" />
           <p class="card__label">
