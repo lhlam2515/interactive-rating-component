@@ -8,17 +8,6 @@ const getRatingValue = (option) => {
   return input ? parseInt(input.value, 10) : 0;
 };
 
-const getCurrentRating = (selector) => {
-  const selectedOption = Array.from(selector.children).find((option) => {
-    if (!option.classList.contains("rating-option")) {
-      return false;
-    }
-    return option.classList.contains("checked");
-  });
-
-  return getRatingValue(selectedOption);
-};
-
 const updateRatingSelector = (rating, selector) => {
   Array.from(selector.children).forEach((option) => {
     if (!option.classList.contains("rating-option")) {
