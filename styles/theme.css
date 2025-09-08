@@ -5,11 +5,13 @@
 
   --color-white: hsl(0, 100%, 100%);
   --color-grey-500: hsl(217, 12%, 63%);
+  --color-grey-700: hsl(215, 18%, 23%);
   --color-grey-900: hsl(213, 19%, 18%);
   --color-grey-950: hsl(216, 12%, 8%);
 
   --text-title: 700 1.5rem/1.2 var(--font-family);
-  --text-body: 400 0.9375rem/1.4 var(--font-family);
+  --text-body: 400 0.875rem/1.5 var(--font-family);
+  --text-button: 700 0.875rem/1 var(--font-family);
 
   --spacing-100: 0.5rem;
   --spacing-200: 1rem;
