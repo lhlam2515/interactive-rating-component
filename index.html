@@ -1,49 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main class="container">
+      <!-- Rating state start -->
+      <article class="card rating-card">
+        <header class="card__header">
+          <img src="./images/icon-star.svg" alt="" />
+        </header>
+        <section class="card__content">
+          <h1 class="card__title">How did we do?</h1>
+          <p class="card__text">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <form action="" id="rating-form" class="rating-form" novalidate>
+            <fieldset class="rating-selector">
+              <legend class="sr-only">Rating</legend>
 
-  <!-- Rating state start -->
+              <label class="rating-option">
+                <input type="radio" name="rating" value="1" />
+                1
+              </label>
+              <label class="rating-option">
+                <input type="radio" name="rating" value="2" />
+                2
+              </label>
+              <label class="rating-option">
+                <input type="radio" name="rating" value="3" />
+                3
+              </label>
+              <label class="rating-option">
+                <input type="radio" name="rating" value="4" />
+                4
+              </label>
+              <label class="rating-option">
+                <input type="radio" name="rating" value="5" />
+                5
+              </label>
+            </fieldset>
+            <button type="submit" class="btn submit-btn">Submit</button>
+          </form>
+        </section>
+      </article>
+      <!-- Rating state end -->
 
-  How did we do?
+      <!-- Thank you state start -->
+      <article class="card thank-you-card hidden">
+        <header class="card__header">
+          <img src="./images/illustration-thank-you.svg" alt="" />
+          <p class="card__label">
+            You selected <span class="card__rating"></span> out of 5
+          </p>
+        </header>
+        <section class="card__content">
+          <h1 class="card__title">Thank you!</h1>
+          <p class="card__text">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </section>
+      </article>
+      <!-- Thank you state end -->
+    </main>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/lhlam2515">lhlam2515</a>.
+    </div> -->
+  </body>
 </html>
