@@ -3,11 +3,20 @@ const thankYouCard = document.getElementById("thank-you-card");
 const ratingForm = document.getElementById("rating-form");
 const ratingSelector = ratingForm.querySelector(".rating-selector");
 
+const getRatingValue = (option) => {
+  const input = option?.querySelector("input");
+  return input ? parseInt(input.value, 10) : 0;
+};
+
 const getCurrentRating = (selector) => {
-  const selectedOption = selector.querySelector(
-    '.rating-option[aria-selected="true"] input'
-  );
-  return selectedOption ? selectedOption.value : 0;
+  const selectedOption = Array.from(selector.children).find((option) => {
+    if (!option.classList.contains("rating-option")) {
+      return false;
+    }
+    return option.classList.contains("checked");
+  });
+
+  return getRatingValue(selectedOption);
 };
 
 const updateRatingSelector = (rating, selector) => {
@@ -17,8 +26,10 @@ const updateRatingSelector = (rating, selector) => {
     }
 
     const input = option.querySelector("input");
-    option.setAttribute("aria-selected", input.value === rating);
-    input.checked = input.value === rating;
+    const ratingValue = getRatingValue(option);
+
+    option.classList.toggle("checked", ratingValue === rating);
+    input.checked = ratingValue === rating;
   });
 };
 
@@ -27,12 +38,8 @@ ratingSelector.addEventListener("click", (event) => {
     return;
   }
 
-  let currentRating = getCurrentRating(ratingSelector);
-  const selectedRating = event.target.querySelector("input").value;
-
-  currentRating = currentRating === selectedRating ? 0 : selectedRating;
-
-  updateRatingSelector(currentRating, ratingSelector);
+  const selectedRating = getRatingValue(event.target);
+  updateRatingSelector(selectedRating, ratingSelector);
 });
 
 ratingForm.addEventListener("submit", (event) => {
